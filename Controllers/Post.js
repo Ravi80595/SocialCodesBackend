@@ -9,7 +9,6 @@ import moment from 'moment'
 export const createPost = async(req,res)=>{
     try{
         const {userId,description,picturePath}= req.body
-        // const {picturePath}=req.file
         const user = await User.findById(userId)
 
          // Check if the user has created a post in the last 24 hours
